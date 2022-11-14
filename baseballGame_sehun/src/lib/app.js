@@ -2,6 +2,7 @@ import pickRandomNumber from './utils/RandomNumber';
 
 export default class App {
   #rootElement;
+  #state;
 
   constructor(rootId) {
     this.#rootElement = document.getElementById(rootId);
@@ -22,7 +23,22 @@ export default class App {
     `;
   }
 
+  // play(value) {
+  //   let strike = 0;
+  //   let ball = 0;
+
+  //   for(let i =0; i<3; i++) {
+  //     const index =
+  //   }
+  // }
+
+  pickRandomNumber() {
+    this.pickRandomNumber = pickRandomNumber(3);
+    console.log(this.pickRandomNumber);
+  }
+
   render() {
     this.#rootElement.innerHTML = this.template();
+    console.log(pickRandomNumber);
   }
 }

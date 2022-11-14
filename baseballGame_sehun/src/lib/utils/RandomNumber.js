@@ -1,14 +1,14 @@
-const answer = 3;
+const pickRandomNumber = (length) => {
+  const pick = (list = []) => {
+    if (list.length >= length) return list;
 
-function pickRandomNumber(answer) {
-  const list = [];
-  const temp = 0;
+    const random = Math.floor(Math.random() * 9 + 1);
+    if (!list.includes(random)) list.push(random);
 
-  do {
-    let randomNumber = Math.floor(Math.random() * 9 + 1);
-    list.push(randomNumber);
-  } while (list.length == 3);
-}
+    return pick(list);
+  };
 
-console.log(pickRandomNumber());
+  return pick().join('');
+};
+
 export default pickRandomNumber;
