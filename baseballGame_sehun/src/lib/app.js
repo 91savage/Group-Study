@@ -1,3 +1,5 @@
+import pickRandomNumber from './utils/RandomNumber';
+
 export default class App {
   #rootElement;
 
@@ -12,7 +14,7 @@ export default class App {
     <h5>올바른 예) 139</h5>
     <h5>틀린 예) 122</h5>
     <form id = "form">
-        <input type="text" id="input">
+        <input type="text" id="input" maxLength=3>
         <button id="btn">가위바위보</button>
     </form>
     <h3> 결과 </h3>
